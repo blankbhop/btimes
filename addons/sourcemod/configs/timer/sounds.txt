@@ -1,0 +1,28 @@
+"Sounds"
+{
+	"World Record" // Called when someone gets a record
+	{
+		"1"
+		{
+			"Position" "1" // The map position a player must get for this sound to play
+			"Sound"    "yash1.mp3"
+		}
+		
+	}
+	
+	"Personal Record" // Called when someone beats their own time
+	{
+		"1"
+		{
+			"Sound"    "yash2.mp3"
+		}
+	}
+	
+	//"No New Time" // Called when someone doesn't beat their own time.
+	{
+		"1"
+		{
+			"Sound"    "yash2.mp3"
+		}
+	}
+}

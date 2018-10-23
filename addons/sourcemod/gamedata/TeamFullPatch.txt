@@ -1,0 +1,57 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Addresses"
+		{
+			"TEAMFULL"
+			{
+				"windows"
+				{
+					"signature" "Team_Is_Full"
+				}
+				"linux"
+				{
+					"signature" "Team_Is_Full"
+				}
+			}
+		}
+		"Signatures"
+		{
+			"Team_Is_Full"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\xA1****\x80\x78\x34\x00"
+				"linux"		"@_ZN13CCSBotManager13BotAddCommandEibPKc12CSWeaponType17BotDifficultyType"
+			}
+		}
+	}
+	
+	"csgo"
+	{
+		"Addresses"
+		{
+			"TEAMFULL"
+			{
+				"windows"
+				{
+					"signature" "Team_Is_Full"
+				}
+				"linux"
+				{
+					"signature" "Team_Is_Full"
+				}
+			}
+		}
+	
+		"Signatures"
+		{
+			"Team_Is_Full"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\xA1****\x80\x78\x38\x00"
+				"linux"     "\x55\x89\xE5\x57\x56\x53\x83\xEC\x4C\x8B\x15\x2A\x2A\x2A\x2A\x8B\x7D\x0C\x8B\x75\x14\x0F\xB6\x5D\x10\x80\x7A\x38\x00\x75\x31\x8B\x8A\x14\x05\x00\x00\x31\xC0\x85\xC9\x75\x15\x80\x3D\x2A\x2A\x2A\x2A\x00"
+			}
+		}
+	}
+}

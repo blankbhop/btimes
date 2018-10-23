@@ -1,0 +1,1 @@
+Everything in here will control certain aspects of the timer. I suggest to not remove any of these plugins without knowing what you're doing.

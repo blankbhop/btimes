@@ -1,0 +1,48 @@
+// idlename = name of bot while it isn't playing anything
+// activename = name of bot while it is playing a record. Available name variables: {type}(Timer type, Main or Bonus), {style}(Style name), {tas}(Bot is TAS or not. Looks like " (TAS)"/"", {time}(player's time), {name}(player name)
+// idletag = same as idlename but for the bot's clantag
+// activetag = same as activename but for the bot's clantag
+// bottype = what type of bot is it? 'menu' (players can use a menu to choose which time they want to see) or 'cycle' (cycles through the specified list of times)
+// type = 'main' (0) or 'bonus' (1) or 'all' (main and bonus)
+// style = style number via styles.cfg or 'all' (all styles)
+// "style" "1+" means every style that has a value of 1 or higher
+// "style" "1-5" means styles 1 to 5
+// "style" "All" means every style
+// "style" "3" means style 3 only
+// "style" "1;5;8;3" means styles 1, 5, 8, and 3
+// "style" "1-3;7-12" means styles 1 to 3 and 7 to 12
+// tas = 0 (non-tas), 1 (tas), or 'all' (tas and non-tas)
+// blacklist = list of specific categories the bot can't play (type,style,tas) separated by semicolon for each category. Ex: 0,0,0;1,0,0;0,0,1
+// team = team the bot will spawn on (2 = t, 3 = ct)
+ 
+ 
+"Bots"
+{
+    // This bot cycles through one record over and over
+    "0"
+    {
+        "idlename" "Main Normal Cycle Bot"
+        "activename" "{type} - {style}: {time}"
+        "idletag" ""
+        "activetag" "{name}"
+        "bottype" "cycle"
+        "type" "0"
+        "style" "0"
+        "tas"   "0"
+        "team"  "3"
+    }
+   
+    "1"
+    {
+        "idlename" "!replay (+use)"
+        "activename" "{type} - {style}: {time}"
+        "idletag" ""
+        "activetag" "{name}"
+        "bottype" "menu"
+        "type" "All"
+        "style" "All"
+        "tas"   "All"
+        "blacklist" "0,0,0" // Disable bot from playing main/normal/nontas because the first bot plays it
+        "team"  "3"
+    }
+}

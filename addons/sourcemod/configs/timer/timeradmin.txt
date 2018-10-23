@@ -1,0 +1,12 @@
+"Timer Admin"
+{
+	"styles" "i"
+	"delete" "i"
+	"adminmenu" "s"
+	"zones"     "i"
+	"basic"   "i"
+	"reload" "i"
+	"replay" "i"
+	"tier"   "i"
+	"config" "i"
+}

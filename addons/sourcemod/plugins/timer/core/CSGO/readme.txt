@@ -1,0 +1,1 @@
+This is only effective for CS:GO, remove this if you're running the timer through a CS:S server.

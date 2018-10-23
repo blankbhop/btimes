@@ -1,0 +1,1 @@
+Don't touch anything in this directory, all replay data will be put here. To delete replays use !replay to delete a bot, and use !delete to delete a time.
