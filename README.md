@@ -19,7 +19,7 @@ Drag and drop the server upload files to your server, and edit databases.cfg to 
 		"user"			"usernamehere"
 		"pass"			"passwordhere"
 		//"timeout"		"0"
-		"port"		"3306"
+		"port"		   	"porthere"
 	}
 ```
 
