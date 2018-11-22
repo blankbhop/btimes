@@ -1,6 +1,6 @@
 # bTimes 2.0 by blacky
 Timer for both CS:S and CS:GO bhop servers.
-## Leaked by Blank & [njd (aka Bonner)](https://github.com/natejd).
+## Leaked by Blank & [njd](https://github.com/natejd) (aka Bonner).
 DM me on discord if you have source codes you would like to provide or the stages plugin, once I get all source codes and the stages plugin the entire bundle will be complete.
 ```
 Blank#2394
