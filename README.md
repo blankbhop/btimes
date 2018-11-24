@@ -1,3 +1,13 @@
+# Servers running this plugin
+```
+GiClan - 192.223.28.9:27015
+Paradox Hops - 162.248.88.42:27040
+Acers Bhop - 68.50.23.141:27015
+KawaiiClan - 162.248.92.5:27015 & 74.91.125.80:27015
+```
+## DM Blank if you have another server running the timer.
+
+
 # bTimes 2.0 by blacky
 Timer for both CS:S and CS:GO bhop servers.
 ## Leaked by Blank & [njd](https://github.com/natejd) (aka Bonner).
