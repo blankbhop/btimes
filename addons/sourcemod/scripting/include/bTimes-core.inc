@@ -128,12 +128,12 @@ stock void DB_CreatePlayerListFromName(int client, const char[] title, Database 
 	}
 	else
 	{
-		PrintToBlacky("DB_CreatePlayerListFromName 1: %f", GetEngineTime());
+		//PrintToBlacky("DB_CreatePlayerListFromName 1: %f", GetEngineTime());
 		char sName[(2 * MAX_NAME_LENGTH) + 1];
 		SQL_LockDatabase(db);
 		SQL_EscapeString(db, name, sName, sizeof(sName));
 		SQL_UnlockDatabase(db);
-		PrintToBlacky("DB_CreatePlayerListFromName 2: %f", GetEngineTime());
+		//PrintToBlacky("DB_CreatePlayerListFromName 2: %f", GetEngineTime());
 		
 		DataPack pack = new DataPack();
 		WritePackCell(pack, GetClientUserId(client));
@@ -896,12 +896,12 @@ stock void UpdateMessages()
 	}
 }
 
-stock bool IsBlacky(int client)
+/* stock bool IsBlacky(int client)
 {
 	char sAuth[32];
 	GetClientAuthId(client, AuthId_Steam2, sAuth, sizeof(sAuth));
 	return StrContains(sAuth, "0:1739936") != -1;
-}
+} */
 
 stock int GetClientObservee(int client)
 {
@@ -922,7 +922,7 @@ stock int GetClientObservee(int client)
 	return 0;
 }
 
-stock void PrintToBlacky(const String:msg[], any:...)
+/* stock void PrintToBlacky(const String:msg[], any:...)
 {
 	//0:1739936
 	char sAuth[32];
@@ -977,4 +977,4 @@ stock void PrintToBlacky(const String:msg[], any:...)
 		
 		EndMessage();
 	}
-}
+} */
