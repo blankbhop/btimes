@@ -107,7 +107,7 @@ public void OnPluginStart()
 	RegConsoleCmdEx("sm_fast", SM_Fast, "Sets your speed to fast (2.0)");
 	//RegConsoleCmdEx("sm_lowgrav", SM_Lowgrav, "Lowers your gravity.");
 	//RegConsoleCmdEx("sm_normalgrav", SM_Normalgrav, "Sets your gravity to normal.");
-	RegConsoleCmdEx("sm_stuck", SM_Stuck, "Unstuck yourself");
+	//RegConsoleCmdEx("sm_stuck", SM_Stuck, "Unstuck yourself");
 	
 	// Admin commands
 	RegConsoleCmd("sm_move", SM_Move, "For getting players out of places they are stuck in");
