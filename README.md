@@ -1,3 +1,11 @@
+# Plugins Included
+```
+Blackys RTV - $50
+bTimes2.0 - $200
+Blackys Anti Strafe-hack 2 - $100
+```
+### If you can contribute with the sources to BASH2, or the plugin and source of Blackys Stages plugin, please do.
+
 # Servers running this plugin
 ```
 GiClan - 192.223.28.9:27015
