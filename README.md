@@ -8,10 +8,11 @@ Blackys Anti Strafe-hack 2 - $100
 
 # Servers running this plugin
 ```
-GiClan - 192.223.28.9:27015
-Paradox Hops - 162.248.88.42:27040
-Acers Bhop - 68.50.23.141:27015
-KawaiiClan - 162.248.92.5:27015 & 74.91.125.80:27015
+(CS:S)GiClan - 192.223.28.9:27015
+(CS:S)Paradox Hops - 162.248.88.42:27040
+(CS:S)Acers Bhop - 68.50.23.141:27015
+(CS:S)KawaiiClan - 162.248.92.5:27015 & 74.91.125.80:27015
+(CS:GO)Ambrosia Bhop - 91.121.146.57:27796
 ```
 ## DM Blank if you have another server running the timer.
 
