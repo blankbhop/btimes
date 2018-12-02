@@ -18,6 +18,9 @@ If you have the stages plugin, please contribute the source, its the only plugin
 ```
 ## DM Blank if you have another server running the timer.
 
+```
+For support with the timer please visit: https://discord.gg/KTcnSTm
+```
 
 # bTimes 2.0 by blacky
 Timer for both CS:S and CS:GO bhop servers.
