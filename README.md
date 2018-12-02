@@ -1,10 +1,13 @@
 # Plugins Included
 ```
-Blackys RTV - $50
-bTimes2.0 - $200
-Blackys Anti Strafe-hack 2 - $100
+Blackys RTV - $50 (full source)
+bTimes2.0 - $200 (full source)
+Blackys Anti Strafe-hack 2 - $100 (full source)
 ```
-### If you can contribute with the sources to BASH2, or the plugin and source of Blackys Stages plugin, please do.
+
+```
+If you have the stages plugin, please contribute the source, its the only plugin needed to complete this github.
+```
 
 # Servers running this plugin
 ```
