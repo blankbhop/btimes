@@ -1,1 +1,0 @@
-Tickrate enabler is only for CS:S, the purpose is to make it so that various of tickrates will work, mainly used so that 100 tick actually is set in place.
