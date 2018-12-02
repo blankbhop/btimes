@@ -1,1 +1,0 @@
-All files set the walk speed of weapons to 260. Get rid of if you are running timer on a CS:GO server.
