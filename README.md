@@ -1,7 +1,7 @@
 # For support with the timer please visit [my discord](https://discord.gg/KTcnSTm)
 # bTimes 2.0 by blacky
 Timer for both CS:S and CS:GO bhop servers.
-## Leaked by Blank & [njd](https://github.com/natejd)
+## Leaked by Blank & [Bonner](https://github.com/natejd)
 ```
 Blank#2394
 njd#7093
