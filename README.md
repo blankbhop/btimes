@@ -36,6 +36,7 @@ If you have the stages plugin, please contribute the source, its the only plugin
 # Servers running this plugin
 ```
 (CS:S)Blank Bhop - 92.38.148.15:27015 & 92.38.148.15:27016 [WL]
+(CS:GO)Blank Bhop - 92.38.148.15:27018
 (CS:S)Project Bhop - 74.91.126.139:27015
 (CS:S)GiClan - 192.223.28.9:27015
 (CS:S)Paradox Hops - 162.248.88.42:27040
