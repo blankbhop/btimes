@@ -3,7 +3,7 @@
 Timer for both CS:S and CS:GO bhop servers.
 ## Leaked by Blank & [Bonner](https://github.com/natejd)
 ```
-Blank#2394
+Blank#9991
 njd#7093
 ```
 
