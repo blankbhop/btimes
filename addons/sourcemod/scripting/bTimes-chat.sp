@@ -840,7 +840,8 @@ public Action SM_CCHelp(int client, int args)
 // Chat processor plugin
 public Action CP_OnChatMessage(int& author, ArrayList recipients, char[] flagstring, char[] name, char[] message, bool& processcolors, bool& removecolors)
 {
-	AlterChatMessage(author, recipients, message, name, "CP_OnChatMessage");
+	EditChatMsgRecipients(author, recipients, true, "CP_OnChatMessage");
+	AlterChatMessage(author, message, name);
 	
 	return Plugin_Changed;
 }
@@ -848,12 +849,61 @@ public Action CP_OnChatMessage(int& author, ArrayList recipients, char[] flagstr
 // Simple chat processor plugin
 public Action OnChatMessage(int &author, Handle recipients, char[] name, char[] message)
 {
-	AlterChatMessage(author, recipients, message, name, "OnChatMessage");
+	EditChatMsgRecipients(author, recipients, false, "OnChatMessage");
+	AlterChatMessage(author, message, name);
 	
 	return Plugin_Changed;
 }
 
-void AlterChatMessage(int &author, Handle recipients, char[] message, char[] name, const char[] caller)
+void EditChatMsgRecipients(int &author, Handle recipients, bool bUseUserIds, const char[] caller)
+{
+	if(g_Engine == Engine_CSS)
+	{
+		if(g_bNewMessage == true)
+		{
+			if(StrEqual(caller, "OnChatMessage"))
+			{
+				if(GetMessageFlags() & CHATFLAGS_ALL && !IsPlayerAlive(author))
+				{
+					for(new client = 1; client <= MaxClients; client++)
+					{
+						if(IsClientConnected(client) && IsClientInGame(client) && IsPlayerAlive(client))
+						{
+							PushArrayCell(recipients, bUseUserIds ? GetClientUserId(client) : client);
+						}
+					}
+				}
+			}
+			
+			g_bNewMessage = false;
+		}
+	}
+	
+	int iSize = GetArraySize(recipients);
+	for(int idx; idx < iSize; idx++)
+	{
+		int client = GetArrayCell(recipients, idx);
+		if(bUseUserIds && (client = GetClientOfUserId( client )) <= 0)
+		{
+			continue;
+		}
+		
+		if(!AreClientCookiesCached(client))
+		{
+			continue;
+		}
+		
+		if(!GetCookieBool(client, g_hHideChat))
+		{
+			continue;
+		}
+		
+		RemoveFromArray(recipients, idx--);
+		iSize--;
+	}
+}
+
+void AlterChatMessage(int &author, char[] message, char[] name)
 {
 	/*
 	int len = strlen(message);
@@ -891,48 +941,6 @@ void AlterChatMessage(int &author, Handle recipients, char[] message, char[] nam
 	ReplaceString(message, MAXLENGTH_MESSAGE, "r", "w", false);
 	ReplaceString(message, MAXLENGTH_MESSAGE, "l", "r", false);
 	*/
-	
-	
-	if(g_Engine == Engine_CSS)
-	{
-		if(g_bNewMessage == true)
-		{
-			if(StrEqual(caller, "OnChatMessage"))
-			{
-				if(GetMessageFlags() & CHATFLAGS_ALL && !IsPlayerAlive(author))
-				{
-					for(new client = 1; client <= MaxClients; client++)
-					{
-						if(IsClientConnected(client) && IsClientInGame(client) && IsPlayerAlive(client))
-						{
-							PushArrayCell(recipients, client);
-						}
-					}
-				}
-			}
-			
-			g_bNewMessage = false;
-		}
-	}
-	
-	int iSize = GetArraySize(recipients);
-	for(int idx; idx < iSize; idx++)
-	{
-		int client = GetArrayCell(recipients, idx);
-		
-		if(!AreClientCookiesCached(client))
-		{
-			continue;
-		}
-		
-		if(!GetCookieBool(client, g_hHideChat))
-		{
-			continue;
-		}
-		
-		RemoveFromArray(recipients, idx--);
-		iSize--;
-	}
 	
 	if(g_bChatRankLoaded[author] == false)
 	{
