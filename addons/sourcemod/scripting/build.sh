@@ -8,13 +8,13 @@ if [[ $# -ne 0 ]]; then
     do
         smxfile="`echo $sourcefile | sed -e 's/\.sp$/\.smx/'`"
         echo -e "\nCompiling $sourcefile..."
-        ./spcomp $sourcefile -o compiled/$smxfile
+        ./spcomp $sourcefile -ocompiled/$smxfile
     done
 else
     for sourcefile in *.sp
     do
         smxfile="`echo $sourcefile | sed -e 's/\.sp$/\.smx/'`"
         echo -e "\nCompiling $sourcefile ..."
-        ./spcomp $sourcefile -o compiled/$smxfile
+        ./spcomp $sourcefile -ocompiled/$smxfile
     done
 fi
