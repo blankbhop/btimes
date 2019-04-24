@@ -1249,21 +1249,6 @@ public Action SM_Normalgrav(int client, int args)
 
 public Action SM_Stuck(int client, int args)
 {
-	/*
-	if(!IsBeingTimed(client, TIMER_ANY))
-	{
-		PrintColorText(client, "%s%sYou can only use the %s!stuck%s command if your timer is running. Try %s!p%s instead.",
-			g_msg_start,
-			g_msg_textcol,
-			g_msg_varcol,
-			g_msg_textcol,
-			g_msg_varcol,
-			g_msg_textcol);
-		
-		return Plugin_Handled;
-	}
-	*/
-		
 	float vPos[3], vEyePos[3];
 	Entity_GetAbsOrigin(client, vPos);
 	GetClientEyePosition(client, vEyePos);
@@ -1290,6 +1275,7 @@ public Action SM_Stuck(int client, int args)
 			TR_GetEndPosition(vEndPos);
 			
 			TeleportEntity(client, vEndPos, NULL_VECTOR, view_as<float>({0.0, 0.0, 0.0}));
+			StopTimer(client);
 		}
 		else
 		{
@@ -1309,6 +1295,7 @@ public Action SM_Stuck(int client, int args)
 			vEndPos[2] -= 95.0;
 			
 			TeleportEntity(client, vEndPos, NULL_VECTOR, view_as<float>({0.0, 0.0, 0.0}));
+			StopTimer(client);
 		}
 		else
 		{
@@ -1329,6 +1316,7 @@ public Action SM_Stuck(int client, int args)
 			if(vPos[2] <= vEndPos[2] <= vEyePos[2])
 			{
 				TeleportEntity(client, vEndPos, NULL_VECTOR, view_as<float>({0.0, 0.0, 0.0}));
+				StopTimer(client);
 				
 				return Plugin_Handled;
 			}
@@ -1345,6 +1333,7 @@ public Action SM_Stuck(int client, int args)
 			{
 				vEndPos[2] -= 74.0;
 				TeleportEntity(client, vEndPos, NULL_VECTOR, view_as<float>({0.0, 0.0, 0.0}));
+				StopTimer(client);
 				
 				return Plugin_Handled;
 			}
