@@ -28,9 +28,7 @@ Drag and drop the server upload files to your server, and edit databases.cfg to 
 Blackys RTV - $50 (full source)
 bTimes2.0 - $200 (full source)
 Blackys Anti Strafe-hack 2 - $100 (full source)
-```
-```
-If you have the stages plugin, please contribute the source, its the only plugin needed to complete this github.
+Backwards' Stages - $50 (full source)
 ```
 
 # Servers running this plugin
