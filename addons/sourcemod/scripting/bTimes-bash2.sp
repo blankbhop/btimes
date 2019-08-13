@@ -517,7 +517,7 @@ public Action Timer_UpdateYaw(Handle timer, any data)
 	{
 		if(IsClientInGame(iclient) && !IsFakeClient(iclient))
 		{
-			QueryForCvars(iclient);
+			// QueryForCvars(iclient);
 		}
 	}
 }
@@ -592,7 +592,7 @@ public void OnClientPutInServer(int client)
 		g_ZoomSensitivityChangedCount[client] = 0;
 		g_ZoomSensitivityCheckedCount[client] = 0;
 		
-		QueryForCvars(client);
+		// QueryForCvars(client);
 		
 		g_iLastInvalidButtonCount[client] = 0;
 	}
