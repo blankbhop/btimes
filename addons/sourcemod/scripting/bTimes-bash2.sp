@@ -495,7 +495,7 @@ public Action Timer_MOTD(Handle timer, any data)
 
 public void OnMapStart()
 {
-	CreateTimer(0.2, Timer_UpdateYaw, _, TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE);
+	CreateTimer(0.8, Timer_UpdateYaw, _, TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE);
 	
 	if(g_bLateLoad)
 	{
@@ -517,7 +517,7 @@ public Action Timer_UpdateYaw(Handle timer, any data)
 	{
 		if(IsClientInGame(iclient) && !IsFakeClient(iclient))
 		{
-			// QueryForCvars(iclient);
+			QueryForCvars(iclient);
 		}
 	}
 }
@@ -592,7 +592,7 @@ public void OnClientPutInServer(int client)
 		g_ZoomSensitivityChangedCount[client] = 0;
 		g_ZoomSensitivityCheckedCount[client] = 0;
 		
-		// QueryForCvars(client);
+		QueryForCvars(client);
 		
 		g_iLastInvalidButtonCount[client] = 0;
 	}
