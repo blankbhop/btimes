@@ -14,6 +14,7 @@ ConVar g_cHudRefreshSpeed;
 ConVar g_cSendKeysAlive;
 
 Handle g_hHintTextTimer;
+Handle hText;
 
 bool g_bReplayLoaded;
 bool g_bReplay3Loaded;
@@ -46,6 +47,9 @@ public void OnPluginStart()
 	g_hVelCookie  = RegClientCookie("timer_truevel", "True velocity meter.", CookieAccess_Public);
 	g_hKeysCookie = RegClientCookie("timer_keys",  "Show movement keys on screen.", CookieAccess_Public);
 	SetCookiePrefabMenu(g_hVelCookie, CookieMenu_OnOff, "True velocity meter");
+	
+	//Hud Synchronizer
+	hText = CreateHudSynchronizer();
 }
 
 public void OnAllPluginsLoaded()
@@ -440,12 +444,10 @@ void ShowHudSyncMessage(int client, int target)
 	
 	if(bShowMessage == true)
 	{
-		Handle hText = CreateHudSynchronizer();
 		if(hText != INVALID_HANDLE)
 		{
 			SetHudTextParams(0.005, 0.0, g_cHudRefreshSpeed.FloatValue, 255, 255, 255, 255);
 			ShowSyncHudText(client, hText, sSyncMessage);
-			CloseHandle(hText);
 		}
 	}
 }

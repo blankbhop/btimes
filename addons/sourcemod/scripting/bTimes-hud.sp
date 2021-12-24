@@ -18,6 +18,7 @@ int g_ExpectedValue[3];
 int g_FadeSpeed;
 
 Handle g_hVelCookie;
+Handle hText;
 
 ConVar g_cFadeSpeed;
 ConVar g_cHudSyncPos[2];
@@ -62,6 +63,7 @@ public void OnPluginStart()
 	
 	g_hVelCookie  = RegClientCookie("timer_truevel", "True velocity meter.", CookieAccess_Public);
 	SetCookiePrefabMenu(g_hVelCookie, CookieMenu_OnOff, "True velocity meter");
+	hText = CreateHudSynchronizer();
 }
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
@@ -580,12 +582,10 @@ void ShowSyncMessage(int client, int target)
 	
 	if(bShowMessage == true)
 	{
-		Handle hText = CreateHudSynchronizer();
 		if(hText != INVALID_HANDLE)
 		{
 			SetHudTextParams(g_cHudSyncPos[0].FloatValue, g_cHudSyncPos[1].FloatValue, 3.0, 255, 255, 255, 255);
 			ShowSyncHudText(client, hText, sSyncMessage);
-			CloseHandle(hText);
 		}
 	}
 }
